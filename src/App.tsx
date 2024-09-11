@@ -1,3 +1,5 @@
+import { DefaultLayout } from './layouts/DefaultLayout'
+
 export const App = () => {
-  return <div>App</div>
+  return <DefaultLayout />
 }
