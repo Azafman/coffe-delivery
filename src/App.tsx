@@ -1,5 +1,10 @@
-import { DefaultLayout } from './layouts/DefaultLayout'
+import { BrowserRouter } from 'react-router-dom'
+import { Router } from './Router'
 
 export const App = () => {
-  return <DefaultLayout />
+  return (
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
+  )
 }
