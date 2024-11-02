@@ -1,8 +1,10 @@
-import { HomeContainer } from './styles'
+import { HomeContainer, ListCoffesContainer } from './styles'
 import coffeDeliveryDemo from '../../assets/img/coffe-delivery-home.svg'
 import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import { IconCircle } from '../../components/Icons/IconCircle'
 import { defaultTheme } from '../../styles/themes/default'
+import { CoffeItem } from '../../components/CoffeItem'
+import coffeExpress from '../../assets/img/coffe/expresso.svg'
 
 export const Home = () => {
   return (
@@ -49,8 +51,18 @@ export const Home = () => {
       </section>
 
       <section>
-        <div className="section-descriptions list-coffes">
+        <div className="list-coffes">
           <h2>Nossos cafés</h2>
+
+          <ListCoffesContainer>
+            <CoffeItem
+              coffe="Expresso Tradicional"
+              description="O tradicional café feito com água quente e grão moídos"
+              img={coffeExpress}
+              price={9.9}
+              types={['Tradicional']}
+            />
+          </ListCoffesContainer>
         </div>
       </section>
     </HomeContainer>

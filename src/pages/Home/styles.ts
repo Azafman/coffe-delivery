@@ -71,3 +71,10 @@ export const HomeContainer = styled.main`
     }
   }
 `
+
+export const ListCoffesContainer = styled.ul`
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 0;
+  flex-wrap: wrap;
+`
