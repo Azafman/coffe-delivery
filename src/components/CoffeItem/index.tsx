@@ -1,14 +1,8 @@
+import { CoffeProps } from '../../data/listCoffes'
 import { CoffePriceCart } from './components/CoffePriceCart'
 import { CoffeItemContainer } from './style'
 
-interface CoffeItemProps {
-  coffe: string
-  price: number
-  description: string
-  types: string[]
-  img: string
-}
-export const CoffeItem = (coffeItem: CoffeItemProps) => {
+export const CoffeItem = (coffeItem: CoffeProps) => {
   return (
     <CoffeItemContainer>
       <main className="full-center main-coffe">
