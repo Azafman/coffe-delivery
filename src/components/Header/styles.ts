@@ -4,7 +4,7 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 5rem;
+  padding: 2rem 2rem;
 `
 export const CartContainer = styled.div`
   display: flex;
@@ -30,5 +30,10 @@ export const CartContainer = styled.div`
     border-radius: 6px;
     background-color: ${(props) => props.theme['yellow-light']};
     border: 1px solid ${(props) => props.theme['yellow-dark']};
+  }
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+    align-items: end;
   }
 `

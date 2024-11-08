@@ -6,4 +6,8 @@ export const LayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${(props) => props.theme.background};
+
+  @media (max-width: 1300px) {
+    max-width: initial;
+  }
 `

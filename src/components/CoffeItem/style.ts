@@ -4,7 +4,7 @@ export const CoffeItemContainer = styled.li`
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
-  max-width: 18rem;
+  flex: 0 0 22rem;
 
   .full-center {
     display: flex;
@@ -59,5 +59,8 @@ export const CoffeItemContainer = styled.li`
         padding: 1rem 0;
       }
     }
+  }
+  @media (max-width: 1300px) {
+    flex: 0 0 18rem;
   }
 `

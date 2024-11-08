@@ -4,7 +4,7 @@ import { Coffee, Package, ShoppingCart, Timer } from 'phosphor-react'
 import { IconCircle } from '../../components/Icons/IconCircle'
 import { defaultTheme } from '../../styles/themes/default'
 import { CoffeItem } from '../../components/CoffeItem'
-import coffeExpress from '../../assets/img/coffe/expresso.svg'
+import { coffes } from '../../data/listCoffes'
 
 export const Home = () => {
   return (
@@ -55,13 +55,9 @@ export const Home = () => {
           <h2>Nossos cafés</h2>
 
           <ListCoffesContainer>
-            <CoffeItem
-              coffe="Expresso Tradicional"
-              description="O tradicional café feito com água quente e grão moídos"
-              img={coffeExpress}
-              price={9.9}
-              types={['Tradicional']}
-            />
+            {coffes.map((coffe, index) => {
+              return <CoffeItem key={index} {...coffe} />
+            })}
           </ListCoffesContainer>
         </div>
       </section>

@@ -26,6 +26,13 @@ export const HomeContainer = styled.main`
         font-family: 'Baloo 2', sans-serif;
         font-weight: 900;
         color: ${(props) => props.theme['base-title']};
+
+        @media (max-width: 810px) {
+          font-size: 2.5rem;
+        }
+        @media (max-width: 550px) {
+          font-size: 2rem;
+        }
       }
       p {
         font-size: 1.5rem;
@@ -46,6 +53,10 @@ export const HomeContainer = styled.main`
         gap: 1rem;
         font-size: 1.125rem;
       }
+
+      @media (max-width: 830px) {
+        max-height: initial;
+      }
     }
   }
 
@@ -58,7 +69,13 @@ export const HomeContainer = styled.main`
     }
   }
 
-  @media (max-width: 1150px) {
+  @media (max-width: 1500px) {
+    padding: 5rem 5rem;
+  }
+
+  @media (max-width: 1300px) {
+    padding: 5rem 2rem;
+
     .section-header {
       flex-direction: column;
     }
@@ -70,11 +87,23 @@ export const HomeContainer = styled.main`
       margin: auto;
     }
   }
+
+  @media (max-width: 550px) {
+    .section-header {
+      flex-direction: column-reverse;
+    }
+  }
 `
 
 export const ListCoffesContainer = styled.ul`
   display: flex;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: 2rem 0;
   padding: 2rem 0;
   flex-wrap: wrap;
+
+  @media (max-width: 1300px) {
+    justify-content: center;
+    gap: 2rem;
+  }
 `
